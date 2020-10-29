@@ -15,7 +15,7 @@ class App extends Component {
   criarNota(titulo, texto){
     const novanota = {titulo,texto};
     //[...] spread operator é pegar cada um dos itens do array e passar como argumento)
-    const novoarraynotas =[... this.state.notas,novanota]
+    const novoarraynotas =[...this.state.notas,novanota]
     const novoestado = {
       notas:novoarraynotas
     }
