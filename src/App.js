@@ -7,21 +7,25 @@ import './assets/index.css';
 class App extends Component {
   constructor(){
     super();
-    this.notas = []
-    this.state = {}
+    
+    this.state = {
+      notas:[]
+    }
   }
   criarNota(titulo, texto){
     const novanota = {titulo,texto};
-    this.notas.push(novanota);
-    this.setState({
-      notas:this.notas
-    })
+    //[...] spread operator é pegar cada um dos itens do array e passar como argumento)
+    const novoarraynotas =[... this.state.notas,novanota]
+    const novoestado = {
+      notas:novoarraynotas
+    }
+    this.setState(novoestado)
   }
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
-        <ListaDeNotas notas={this.notas}/>
+        <ListaDeNotas notas={this.state.notas}/>
 
       </section>
     );
