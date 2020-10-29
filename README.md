@@ -1,4 +1,4 @@
-## Lista de Notas
+## Lista de tarefas
 
 Projeto construído em react para criar notas
 
@@ -6,6 +6,10 @@ Projeto construído em react para criar notas
 - React
 - Javascript
 - Styled Component
+
+### Rodando a aplicação
+**Na web:**
+https://listadetarefastodo.netlify.app/
 
 ### Como rodar a aplicação
 #### Localmente:
